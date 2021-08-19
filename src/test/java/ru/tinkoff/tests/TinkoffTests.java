@@ -1,22 +1,24 @@
 package ru.tinkoff.tests;
 
-import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.tinkoff.helpers.DriverUtils;
-
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.title;
-import static io.qameta.allure.Allure.step;
-import static org.assertj.core.api.Assertions.assertThat;
+import ru.tinkoff.tests.pages.HomePage;
+import ru.tinkoff.tests.pages.InvestmentPage;
 
 
-public class GeneratedTests extends TestBase {
+public class TinkoffTests extends TestBase {
+
     @Test
-    @Description("Soon to be implemented by you (or QA.GURU engineers)")
-    @DisplayName("Открытие сайта")
-    void generatedTest() {
-        step("Открыть 'https://www.tinkoff.ru/'", () -> step("// todo: just add selenium action"));
+    @DisplayName("Проверка недоступности клика по кнопке 'Открыть счёт' без ввода данных")
+    void checkTheButtonOpenAnAccount() {
+        // Arrange
+        HomePage homePage = new HomePage();
+        homePage.openMainPage();
+        // Act
+        homePage.pressTheButtonInvestments();
+        // Assert
+        InvestmentPage investmentPage = new InvestmentPage();
+        investmentPage.checkTheButtonOpenAnAccountDisabled();
     }
 
     @Test
