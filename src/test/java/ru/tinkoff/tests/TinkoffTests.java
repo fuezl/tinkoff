@@ -8,18 +8,6 @@ import ru.tinkoff.tests.pages.*;
 public class TinkoffTests extends TestBase {
 
     @Test
-    @DisplayName("Проверка недоступности клика по кнопке 'Открыть счёт' без ввода данных")
-    void checkTheButtonOpenAnAccount() {
-        // Arrange
-        HomePage homePage = new HomePage();
-        homePage.openMainPage();
-        // Act
-        homePage.pressTheButtonInvestments();
-        // Assert
-        new InvestmentPage().checkTheButtonOpenAnAccountDisabled();
-    }
-
-    @Test
     @DisplayName("Проверка доступности клика по кнопке 'Открыть счёт' после ввода номера телефона")
     void checkTheButtonOpenAnAccountAfterInputPhoneNumber() {
         // Arrange
