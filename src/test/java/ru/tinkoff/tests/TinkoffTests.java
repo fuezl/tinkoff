@@ -58,4 +58,16 @@ public class TinkoffTests extends TestBase {
         // Assert
         new RegistrationPage().checkingThePhoneNumberInputField();
     }
+
+    @Test
+    @DisplayName("Проверка недоступности клика по кнопке 'Открыть счёт' без ввода данных")
+    void checkTheButtonOpenAnAccount() {
+        // Arrange
+        HomePage homePage = new HomePage();
+        homePage.openMainPage();
+        // Act
+        homePage.pressTheButtonInvestments();
+        // Assert
+        new InvestmentPage().checkTheButtonOpenAnAccountDisabled();
+    }
 }
