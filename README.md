@@ -68,6 +68,11 @@ allure serve build/allure-results
 
 ![alt "Allure TestOps"](./images/Allure_TestOps.png)
 
+### Интерграция с Jira
+#### Отображение тест-кейсов и ланча
+
+![jira](./images/jira.png)
+
 ### Видео с примером прохождения теста в selenoid
 
 !["Video from Selenoid"](./images/test__video.gif)
