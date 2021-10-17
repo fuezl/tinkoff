@@ -2,12 +2,14 @@ package ru.tinkoff.tests;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import ru.tinkoff.customAnnotations.JiraIssue;
 import ru.tinkoff.tests.pages.*;
 
 
 public class TinkoffTests extends TestBase {
 
     @Test
+    @JiraIssue("HOMEWORK-251")
     @DisplayName("Проверка доступности клика по кнопке 'Открыть счёт' после ввода номера телефона")
     void checkTheButtonOpenAnAccountAfterInputPhoneNumber() {
         // Arrange
@@ -22,6 +24,7 @@ public class TinkoffTests extends TestBase {
     }
 
     @Test
+    @JiraIssue("HOMEWORK-251")
     @DisplayName("Проверка появления полей ввода после ввода телефона в заявке на расчётный счёт")
     void checkingTheAppearanceOfTheCurrentAccountFields() {
         // Arrange
@@ -36,6 +39,7 @@ public class TinkoffTests extends TestBase {
     }
 
     @Test
+    @JiraIssue("HOMEWORK-251")
     @DisplayName("Проверка появления полей ввода после ввода телефона в заявке на расчётный счёт")
     void buttonVisibilityCheckConnect() {
         // Arrange
@@ -48,6 +52,7 @@ public class TinkoffTests extends TestBase {
     }
 
     @Test
+    @JiraIssue("HOMEWORK-251")
     @DisplayName("Проверка видимости поля для авторизации")
     void buttonVisibilityAuthorizationField() {
         // Arrange
@@ -60,6 +65,7 @@ public class TinkoffTests extends TestBase {
     }
 
     @Test
+    @JiraIssue("HOMEWORK-251")
     @DisplayName("Проверка недоступности клика по кнопке 'Открыть счёт' без ввода данных")
     void checkTheButtonOpenAnAccount() {
         // Arrange
