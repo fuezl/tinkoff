@@ -5,14 +5,13 @@ plugins {
 
 repositories {
     mavenCentral()
-    maven {url = "https://dl.bintray.com/qameta/maven-unstable/"}
 }
 
-def allureVersion = "2.13.9",
-    selenideVersion = "5.23.2",
-    junitVersion = "5.7.2",
+def allureVersion = "2.15.0",
+    selenideVersion = "5.25.0",
+    junitVersion = "5.8.1",
     restAssured = "4.4.0",
-        assertj = "3.20.2",
+        assertj = "3.21.0",
         slf4j = "1.7.32",
         javaFaker = "1.0.2"
 
@@ -28,7 +27,7 @@ allure {
 
 dependencies {
     testImplementation(
-            "org.aspectj:aspectjweaver:1.9.6",
+            "org.aspectj:aspectjweaver:1.9.7",
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "io.rest-assured:rest-assured:$restAssured",
